@@ -1,4 +1,4 @@
-import React, { useEffect,useCallback, useState } from 'react'
+import React, { useEffect,useCallback, useState,useMemo } from 'react'
 import axios from 'axios';
 import _ from 'lodash';
 import { API_KEY } from './apiSetup';
@@ -56,7 +56,7 @@ const seeResult =(e)=>{
 
 return <div>
       <div className='gif-welcomeMessage'>
-        <h1><i class="fas fa-meteor"></i></h1>
+        <h1><i className="fas fa-meteor"></i></h1>
         <h1>Search that Giff!!</h1>
       </div>
 
