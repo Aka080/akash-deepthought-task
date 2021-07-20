@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html {
+    font-size:10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    width:80vw;
+    margin:auto;
+    background-color: antiquewhite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shoppingCartWrapper{
+  
+
+}
+.shopWelcomeMessage{
+    padding:3rem;
+    background-color: rgb(233, 188, 130);
+    text-align: center;
+    color:white;
+}
+.listAndCart{
+padding:3rem;
+display: flex;
+justify-content:space-between
+
+}
+/* Shopping list---------------START------------------------------ */
+.shoppingList{
+    width:40%
+
+}
+.shoppingListHead{
+    color:rgba(203, 12, 236, 0.897);
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.shoppingList ul{
+    list-style: none;
+}
+.shoppingList ul li{
+    display: flex;
+    border-left : 2px solid rgba(203, 12, 236, 0.897);
+    margin-bottom:1rem;
+    padding:1rem;
+  
+    
+}
+.shoppingList ul li:nth-child(odd){
+    background: wheat
+    
 }
 
-.App-link {
-  color: #61dafb;
+.shoppingList ul li h2{
+    flex-grow:1;
+}
+.iconHover:hover{
+  color:rgba(203, 12, 236, 0.897);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Shopping list---------------END------------------------------ */
+/* Shopping CART---------------START------------------------------ */
+.shoppingCart{
+width:40%;
+
 }
+.shoppingCart-head{
+ color:rgba(203, 12, 236, 0.897);
+ text-align:center;
+ background-color: wheat;
+ padding:2rem;
+ border-bottom:2px solid rgba(203, 12, 236, 0.897) ;
+ margin-bottom: .3rem;
+}
+.shoppingCart-content{
+    list-style:none;
+}
+.shoppingCart-content li {
+    border-left : 2px solid rgba(203, 12, 236, 0.897);
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:.3rem;
+    padding:1rem;
+}
+.shoppingCart-content-itemName{
+    font-size: 1.8rem;
+    width:50%;
+}
+.shoppingCart-content-addAndSub{
+    width:20%;
+}
+.shoppingCart-content-addAndSub i{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.shoppingCart-content-addAndSub i:hover{
+    color:rgba(203, 12, 236, 0.897) ;
+}
+.shoppingCart-content-addAndSub span{
+    padding:.2rem;
+}
+.shoppingCart-content-delete{
+    font-size: 1.8rem;
+}
+.shoppingCart-content-delete:hover{
+    color:red;
+}
+
