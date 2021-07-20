@@ -15,7 +15,6 @@ const[resultList,setResultList]=useState({feature:true,trending:false,searchResu
 const baseUrl = 'https://g.tenor.com/v1'
 
 const delayedQuery = useCallback(_.debounce((value)=>{
-  console.log('herevalis',value)
   setSearchTerm(value)
 },500),[])
 
@@ -34,7 +33,6 @@ useEffect(()=>{
  
   axios.get(baseUrl+`/search?key=${API_KEY}&q=${searchTerm}&contentfilter=medium&media_filter=minimal&limit=10`)
   .then((res)=>{
-    console.log('req was made')
     setSearchedGif(res.data.results)
   })
 },[searchTerm]) 
